@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img"
+  aria-label="Dorchain Web Solutions">
+  <rect width="1200" height="630" fill="#f4f1e8"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#g)" opacity="0.5"/>
+  <defs>
+    <radialGradient id="g" cx="80%" cy="15%" r="90%">
+      <stop offset="0%" stop-color="#c9f5dc"/>
+      <stop offset="100%" stop-color="#f4f1e8"/>
+    </radialGradient>
+  </defs>
+  <text x="80" y="150" font-family="monospace" font-size="26" letter-spacing="4"
+    fill="#3a8f5f">WEBVERBETERING VOOR ZZP'ERS</text>
+  <text x="76" y="300" font-family="Georgia, serif" font-size="92" font-weight="700"
+    fill="#1c2620">Je website mooier,</text>
+  <text x="76" y="400" font-family="Georgia, serif" font-size="92" font-weight="700"
+    fill="#1c2620">sneller en beter</text>
+  <text x="76" y="500" font-family="Georgia, serif" font-size="92" font-weight="700"
+    fill="#1c2620">gevonden.</text>
+  <text x="80" y="575" font-family="sans-serif" font-size="30" fill="#4a5a50">
+    Dorchain Web Solutions — Jaiden Dorchain</text>
+  <g transform="translate(1010 470)">
+    <circle r="70" fill="none" stroke="#d7e8dd" stroke-width="14"/>
+    <circle r="70" fill="none" stroke="#3ddc84" stroke-width="14" stroke-linecap="round"
+      stroke-dasharray="439.8" stroke-dashoffset="0" transform="rotate(-90)"/>
+    <text text-anchor="middle" y="14" font-family="sans-serif" font-size="44"
+      font-weight="700" fill="#1c2620">100</text>
+  </g>
+</svg>

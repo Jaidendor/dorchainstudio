@@ -1,0 +1,52 @@
+---
+const punten = [
+  'Je site laadt zo traag dat bezoekers al weg zijn voordat hij er staat.',
+  'Op een telefoon valt je indeling uit elkaar.',
+  'Je staat niet in Google, zelfs niet op je eigen bedrijfsnaam.',
+  'Het ontwerp komt uit 2015 en past niet meer bij wat je doet.',
+  'Bezoekers met een schermlezer of toetsenbord lopen vast.',
+  'Je weet dat het beter kan, maar niet waar je moet beginnen.',
+];
+---
+<section class="section herk" id="herkenning">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Herken je dit?</p>
+      <h2>De meeste zzp-websites lopen op dezelfde dingen vast.</h2>
+      <p>Niet omdat je iets fout deed, maar omdat een website nu eenmaal niet jouw vak is.</p>
+    </div>
+
+    <ul class="herk__list">
+      {punten.map((p, i) => (
+        <li class="herk__item reveal" style={`--delay:${i * 70}ms`}>
+          <span class="herk__x" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+          </span>
+          <span>{p}</span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="herk__close reveal">Klinkt bekend? Dit is precies waar ik voor ben.</p>
+  </div>
+</section>
+
+<style>
+  .herk__list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+  .herk__item {
+    display: flex; gap: 0.9rem; align-items: flex-start;
+    padding: 1.15rem 1.35rem; background: var(--paper-2);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    color: var(--ink-soft); font-size: 1.02rem; line-height: 1.45;
+  }
+  .herk__x {
+    flex: none; width: 26px; height: 26px; border-radius: 8px;
+    display: grid; place-items: center; background: oklch(93% 0.04 30);
+  }
+  .herk__x svg { width: 15px; height: 15px; stroke: oklch(55% 0.16 28); stroke-width: 2.4; stroke-linecap: round; fill: none; }
+  .herk__close {
+    margin-top: 2.5rem; font-family: var(--font-display);
+    font-size: var(--text-h3); color: var(--ink); max-width: 24ch;
+  }
+  @media (max-width: 720px) { .herk__list { grid-template-columns: 1fr; } }
+</style>

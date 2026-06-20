@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { site } from '../data/site';
+---
+<Base
+  title={`Privacyverklaring — ${site.brand}`}
+  description="Hoe Dorchain Web Solutions omgaat met je gegevens via het contactformulier."
+  path="/privacyverklaring"
+>
+  <Nav />
+  <main id="main" class="legal">
+    <div class="container">
+      <p class="eyebrow">Privacy</p>
+      <h1>Privacyverklaring</h1>
+      <p class="legal__lead">
+        Korte versie: ik gebruik je gegevens alleen om op je bericht te reageren. Ik
+        verkoop niets door en plaats geen tracking-cookies.
+      </p>
+
+      <h2>Wie verwerkt je gegevens?</h2>
+      <p>
+        {site.person}, handelend onder {site.brand} (eenmanszaak in oprichting). Je
+        bereikt mij via <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+
+      <h2>Welke gegevens en waarom</h2>
+      <p>
+        Vul je het contactformulier in, dan ontvang ik je naam, e-mailadres, eventueel je
+        website en je bericht. Die gebruik ik om contact met je op te nemen en je vraag te
+        beantwoorden. Een wettelijke plicht om ze te bewaren heb ik niet, dus ik bewaar ze
+        niet langer dan nodig.
+      </p>
+
+      <h2>Verzending van het formulier</h2>
+      <p>
+        Het formulier loopt via Formspree. Zij verwerken je bericht namens mij en sturen
+        het naar mijn mailbox. Kijk voor hun werkwijze op
+        <a href="https://formspree.io/legal/privacy-policy/" rel="noopener" target="_blank">het privacybeleid van Formspree</a>.
+      </p>
+
+      <h2>Je rechten</h2>
+      <p>
+        Je mag opvragen welke gegevens ik van je heb, ze laten corrigeren of laten
+        verwijderen. Stuur me een mailtje en ik regel het. Kom je er niet uit, dan kun je
+        terecht bij de Autoriteit Persoonsgegevens.
+      </p>
+
+      <p class="legal__note">Laatst bijgewerkt: juni 2026. Werk dit bij zodra je KvK- en BTW-gegevens definitief zijn.</p>
+      <p><a class="btn btn--ghost" href="/">&larr; Terug naar de site</a></p>
+    </div>
+  </main>
+  <Footer />
+</Base>
+
+<style>
+  .legal { padding-block: clamp(3rem, 2rem + 4vw, 5rem) var(--space-section); }
+  .legal h1 { font-size: var(--text-h2); margin: 1rem 0; }
+  .legal__lead { font-size: var(--text-lead); color: var(--ink-soft); max-width: 56ch; margin-bottom: 2.5rem; }
+  .legal h2 { font-size: var(--text-h3); margin: 2rem 0 0.6rem; }
+  .legal p { max-width: 64ch; color: var(--ink-soft); margin-bottom: 0.6rem; }
+  .legal a { color: var(--accent-deep); }
+  .legal__note { font-size: 0.88rem; color: var(--muted); margin: 2.5rem 0; }
+  .legal .btn { color: var(--ink); }
+</style>

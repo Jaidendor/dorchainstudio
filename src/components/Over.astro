@@ -1,0 +1,61 @@
+---
+const principes = [
+  { t: 'Eerlijk advies', d: 'Heeft je site weinig nodig? Dan zeg ik dat. Ik verkoop je geen werk dat je niet nodig hebt.' },
+  { t: 'Korte lijnen', d: 'Je hebt direct contact met de persoon die aan je site werkt. Geen bureau, geen tussenlagen.' },
+  { t: 'Geen jargon', d: 'Ik leg in gewone taal uit wat ik doe en waarom. Jij blijft de baas over je eigen website.' },
+];
+---
+<section class="section over" id="over">
+  <div class="container over__grid">
+    <div class="over__copy reveal">
+      <p class="eyebrow">Over</p>
+      <h2>Hoi, ik ben Jaiden.</h2>
+      <p class="over__lead">
+        Ik verbeter websites voor zzp’ers en richt me op de dingen waar de meesten niet
+        aan toe komen: snelheid, vindbaarheid en toegankelijkheid.
+      </p>
+      <p>
+        Dorchain Web Solutions is mijn eenmanszaak in oprichting. Dat betekent scherpe
+        tarieven en korte lijnen. Ik werk net zo graag aan een kleine opknapbeurt als aan
+        een site die helemaal opnieuw moet. Wat je nodig hebt, bepaal jij.
+      </p>
+      <a class="btn btn--ghost" href="#contact">Even kennismaken</a>
+    </div>
+
+    <ul class="over__principes reveal" style="--delay:120ms">
+      {principes.map((p) => (
+        <li>
+          <span class="over__check" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+          </span>
+          <div>
+            <strong>{p.t}</strong>
+            <p>{p.d}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .over__grid { display: grid; grid-template-columns: 1fr 0.9fr; gap: clamp(2rem, 1rem + 5vw, 4.5rem); align-items: start; }
+  .over__copy h2 { font-size: var(--text-h2); margin: 1rem 0 1.4rem; }
+  .over__lead { font-size: var(--text-lead); color: var(--ink); margin-bottom: 1.1rem; }
+  .over__copy p { color: var(--ink-soft); margin-bottom: 1.1rem; }
+  .over__copy .btn { margin-top: 0.6rem; }
+  .over__principes { list-style: none; padding: 0; display: grid; gap: 1rem; }
+  .over__principes li {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1.3rem 1.4rem; background: var(--paper-2);
+    border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .over__check {
+    flex: none; width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center;
+    background: var(--accent-wash);
+  }
+  .over__check svg { width: 17px; height: 17px; fill: none; stroke: var(--accent-deep); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+  .over__principes strong { font-weight: 620; }
+  .over__principes p { color: var(--ink-soft); font-size: 0.95rem; margin-top: 0.2rem; }
+  @media (max-width: 860px) { .over__grid { grid-template-columns: 1fr; } }
+</style>

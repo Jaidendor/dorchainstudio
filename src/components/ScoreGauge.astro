@@ -1,0 +1,99 @@
+---
+interface Props {
+  label: string;
+  score: number;
+  sub?: string;
+}
+const { label, score, sub } = Astro.props;
+const R = 52;
+const CIRC = 2 * Math.PI * R;
+---
+<div class="gauge" data-score={score} style={`--circ:${CIRC}`}>
+  <svg viewBox="0 0 120 120" aria-hidden="true">
+    <circle class="gauge__track" cx="60" cy="60" r={R} />
+    <circle class="gauge__bar" cx="60" cy="60" r={R} pathLength={CIRC} />
+  </svg>
+  <span class="gauge__num" data-target={score}>0</span>
+  <span class="gauge__label">{label}</span>
+  {sub && <span class="gauge__sub">{sub}</span>}
+  <span class="sr-only">{label}: score {score} van 100</span>
+</div>
+
+<style>
+  .gauge {
+    position: relative;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 0.4rem;
+  }
+  .gauge svg { width: 100%; height: auto; transform: rotate(-90deg); grid-area: 1 / 1; }
+  .gauge__track { fill: none; stroke: var(--line); stroke-width: 9; }
+  .gauge__bar {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 9;
+    stroke-linecap: round;
+    stroke-dasharray: var(--circ);
+    stroke-dashoffset: var(--circ);
+    transition: stroke-dashoffset 1.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .gauge.is-on .gauge__bar { stroke-dashoffset: var(--offset); }
+  .gauge__num {
+    grid-area: 1 / 1;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    color: var(--ink);
+    margin-top: -0.4rem;
+  }
+  .gauge__label {
+    grid-area: 2 / 1;
+    margin-top: 0.65rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .gauge__sub { grid-area: 3 / 1; font-size: 0.75rem; color: var(--muted); margin-top: 0.15rem; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+</style>
+
+<script>
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const gauges = document.querySelectorAll<HTMLElement>('.gauge');
+
+  function activate(el: HTMLElement) {
+    const score = Number(el.dataset.score ?? 0);
+    const circ = Number(getComputedStyle(el).getPropertyValue('--circ')) || 326.7;
+    el.style.setProperty('--offset', String(circ * (1 - score / 100)));
+    el.classList.add('is-on');
+    const num = el.querySelector<HTMLElement>('.gauge__num');
+    if (!num) return;
+    if (reduced) { num.textContent = String(score); return; }
+    const start = performance.now();
+    const dur = 1300;
+    const step = (t: number) => {
+      const p = Math.min(1, (t - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      num.textContent = String(Math.round(eased * score));
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  if (reduced || !('IntersectionObserver' in window)) {
+    gauges.forEach(activate);
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { activate(e.target as HTMLElement); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    gauges.forEach((g) => io.observe(g));
+  }
+</script>

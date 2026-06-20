@@ -1,0 +1,92 @@
+---
+import ScoreGauge from './ScoreGauge.astro';
+---
+<section class="hero" id="top">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">Webverbetering voor zzp’ers</p>
+      <h1 class="hero__title reveal" style="--delay:60ms">
+        Je website mooier, sneller en <span class="text-accent">beter gevonden</span>.
+      </h1>
+      <p class="hero__lead reveal" style="--delay:140ms">
+        Veel zzp’ers hebben een site die niet doet wat hij zou moeten. Te traag, niet
+        vindbaar, of rommelig op de telefoon. Jij houdt je bezig met je vak. Ik zorg dat
+        je website klopt.
+      </p>
+      <div class="hero__cta reveal" style="--delay:220ms">
+        <a class="btn" href="#contact">Vraag een gratis scan aan <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn btn--ghost" href="#aanpak">Zo werk ik</a>
+      </div>
+      <p class="hero__note reveal" style="--delay:300ms">
+        Vrijblijvend. Je krijgt binnen twee werkdagen een eerlijk oordeel over je site.
+      </p>
+    </div>
+
+    <aside class="hero__card reveal" style="--delay:200ms" aria-label="Voorbeeld van een scorerapport na verbetering">
+      <div class="card__top">
+        <span class="card__dot" aria-hidden="true"></span>
+        <span class="card__file">jouw-website.nl</span>
+        <span class="card__tag">na verbetering</span>
+      </div>
+      <div class="card__gauges">
+        <ScoreGauge label="Snelheid" score={98} />
+        <ScoreGauge label="SEO" score={100} />
+        <ScoreGauge label="Toegankelijk" score={96} />
+        <ScoreGauge label="Mobiel" score={100} />
+      </div>
+      <p class="card__foot">
+        <span aria-hidden="true">↗</span> Dit soort scores haal ik uit Google Lighthouse.
+        Ik richt me op precies deze punten.
+      </p>
+    </aside>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; padding-block: clamp(3rem, 2rem + 5vw, 6rem) var(--space-section); overflow: clip; }
+  .hero::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background:
+      radial-gradient(60% 55% at 88% 8%, var(--accent-wash), transparent 70%),
+      radial-gradient(40% 40% at 5% 100%, oklch(95% 0.02 92), transparent 70%);
+  }
+  .hero__grid {
+    display: grid; gap: clamp(2.5rem, 1rem + 6vw, 5rem); align-items: center;
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+  .hero__title { font-size: var(--text-hero); margin-block: 1.4rem 0; max-width: 14ch; font-weight: 540; }
+  .hero__lead { font-size: var(--text-lead); color: var(--ink-soft); margin-top: 1.6rem; max-width: 46ch; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+  .hero__note { margin-top: 1.4rem; font-size: 0.92rem; color: var(--muted); }
+
+  .hero__card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+    box-shadow: 0 30px 60px -30px oklch(23% 0.014 150 / 0.28), 0 2px 0 var(--line);
+    transform: rotate(1.2deg);
+    transition: transform 0.5s var(--ease);
+  }
+  .hero__card:hover { transform: rotate(0deg); }
+  .card__top {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted);
+    padding-bottom: 1rem; border-bottom: 1px solid var(--line); margin-bottom: 1.25rem;
+  }
+  .card__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-wash); }
+  .card__file { color: var(--ink-soft); }
+  .card__tag {
+    margin-left: auto; background: var(--accent-wash); color: var(--accent-deep);
+    padding: 0.2em 0.7em; border-radius: 100px; font-size: 0.7rem; letter-spacing: 0.04em;
+  }
+  .card__gauges { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(0.75rem, 0.5rem + 1vw, 1.5rem); }
+  .card__foot { margin-top: 1.4rem; font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+  .card__foot span { color: var(--accent-deep); }
+
+  @media (max-width: 920px) {
+    .hero__grid { grid-template-columns: 1fr; }
+    .hero__card { transform: none; max-width: 460px; }
+    .hero__card:hover { transform: none; }
+  }
+</style>
