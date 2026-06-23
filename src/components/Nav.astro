@@ -4,8 +4,9 @@ import type { Translations } from '../i18n/translations';
 
 interface Props {
   t: Translations['nav'];
+  langHref?: string;
 }
-const { t } = Astro.props;
+const { t, langHref } = Astro.props;
 ---
 <header class="nav">
   <div class="container nav__inner">
@@ -26,7 +27,7 @@ const { t } = Astro.props;
           <li><a href={item.href}>{item.label}</a></li>
         ))}
       </ul>
-      <a class="nav__lang" href={t.switchHref} aria-label={t.switchLabel}>{t.switchCode}</a>
+      <a class="nav__lang" href={langHref ?? t.switchHref} aria-label={t.switchLabel}>{t.switchCode}</a>
       <a class="btn nav__cta" href={t.ctaHref}>{t.cta}</a>
     </nav>
   </div>
