@@ -14,7 +14,7 @@ export const site = {
   formspreeEndpoint: 'https://formspree.io/f/mkolwgbn',
 
   // --- Placeholders: invullen zodra bekend ---
-  email: 'jaiden@dorchainwebsolutions.nl',
+  email: 'jaiden@dorchain.studio',
   phone: '',                 // bijv. '+31 6 12 34 56 78'
   city: 'Nederland',
   kvk: 'volgt',              // KvK-nummer na inschrijving
