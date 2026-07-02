@@ -1,0 +1,237 @@
+---
+import { en } from '../../i18n/translations';
+import { site } from '../../data/site';
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+---
+<Base
+  title={`Terms and Conditions — ${site.brand}`}
+  description="The terms and conditions of Dorchain Studio for website improvement and maintenance."
+  path="/en/terms-and-conditions"
+  lang="en"
+>
+  <Nav t={en.nav} langHref="/algemene-voorwaarden" />
+  <main id="main" class="legal">
+    <div class="container">
+      <p class="eyebrow">Business</p>
+      <h1>Terms and Conditions</h1>
+      <p class="legal__lead">
+        These terms apply to every agreement between {site.person}, trading as
+        {site.brand} (sole proprietorship in formation), and a client. They are written for
+        freelancers and business owners who hire me to improve, build or maintain a
+        website. This is a courtesy translation; the Dutch version ("algemene
+        voorwaarden") is the legally binding text and prevails in case of any discrepancy.
+      </p>
+
+      <h2>Article 1 — Definitions</h2>
+      <p>
+        <strong>Dorchain Studio / contractor:</strong> the sole proprietorship of
+        {site.person}, based in {site.city}, Chamber of Commerce (KvK) number {site.kvk},
+        VAT identification number {site.btw}, reachable at
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+      <p>
+        <strong>Client:</strong> the individual or legal entity acting in the course of a
+        profession or business (including freelancers) who enters or wishes to enter into
+        an agreement with Dorchain Studio.
+      </p>
+      <p>
+        <strong>Services:</strong> all work Dorchain Studio carries out for the client,
+        including designing, improving, building, optimising and maintaining websites in
+        the areas of design, speed, findability (SEO), accessibility and responsiveness.
+      </p>
+      <p>
+        <strong>Agreement:</strong> any arrangement between Dorchain Studio and the client
+        to provide services, including the accompanying quote.
+      </p>
+      <p>
+        <strong>Website scan:</strong> the free initial review of the client's existing
+        website. It is non-binding advice, not an offer.
+      </p>
+
+      <h2>Article 2 — Applicability</h2>
+      <p>
+        These terms apply to all quotes, offers, work, agreements and services delivered by
+        Dorchain Studio, unless agreed otherwise in writing before the agreement is formed.
+        They also apply when Dorchain Studio engages third parties to carry out the work.
+        Any purchasing or other terms of the client are explicitly rejected. If any
+        provision turns out to be void or voidable, the remaining provisions stay in
+        effect; the parties will then replace the void provision with one that serves the
+        same purpose as closely as possible. These terms are written for agreements with
+        business clients. Should an agreement nonetheless be concluded with a consumer,
+        the mandatory provisions of consumer law apply in addition.
+      </p>
+
+      <h2>Article 3 — Quotes and formation of the agreement</h2>
+      <p>
+        The free website scan is non-binding and does not constitute a quote. Every quote
+        from Dorchain Studio is non-binding and valid for 30 days from its date, unless
+        stated otherwise. An agreement is formed once the client has accepted the quote in
+        writing (including by email), or once Dorchain Studio has started work at the
+        client's request. Obvious errors or mistakes in quotes or on the website do not
+        bind Dorchain Studio.
+      </p>
+
+      <h2>Article 4 — Performance of the assignment</h2>
+      <p>
+        Dorchain Studio carries out the assignment to the best of its knowledge and
+        ability, generally following the four steps described on this site: free scan,
+        plan &amp; price, execution, and going live with an explanation. The client ensures
+        that all necessary data, texts, images and login details are supplied on time;
+        delays caused by failing to do so are at the client's expense. A stated delivery
+        term is an estimate, not a strict deadline, unless expressly agreed otherwise in
+        writing.
+      </p>
+
+      <h2>Article 5 — Changes and additional work</h2>
+      <p>
+        Changes requested by the client that involve extra time or cost compared to the
+        quote are treated as additional work. Dorchain Studio informs the client in advance
+        of the financial consequences where possible and only carries out additional work
+        after approval, unless immediate execution cannot reasonably be postponed.
+      </p>
+
+      <h2>Article 6 — Prices</h2>
+      <p>
+        Stated prices are in euros and exclude VAT, unless stated otherwise. Costs charged
+        by third parties (hosting, domain registration, plugins, licences, stock photos)
+        are not included unless expressly stated in the quote. For ongoing services such as
+        maintenance, the price may be adjusted annually; an increase is announced at least
+        30 days in advance. For an increase of more than 10%, the client may terminate the
+        ongoing service in writing within 14 days of the announcement, effective from the
+        date the increase would have taken effect.
+      </p>
+
+      <h2>Article 7 — Payment</h2>
+      <p>
+        Unless agreed otherwise, Dorchain Studio invoices 50% of the quoted amount at the
+        start of the assignment and the remainder upon delivery. Ongoing services are
+        invoiced periodically in advance. Payment is due within 14 days of the invoice
+        date, without any set-off or suspension. In case of late payment, the client is in
+        default by operation of law and owes the statutory commercial interest rate,
+        without any notice of default being required. Reasonable collection costs are at
+        the client's expense, with a minimum in line with the Dutch Extrajudicial
+        Collection Costs Act (WIK). Dorchain Studio may suspend work as long as the client
+        has not met its payment obligations.
+      </p>
+
+      <h2>Article 8 — Ownership, licences and intellectual property</h2>
+      <p>
+        All intellectual property rights to designs, texts, code, documentation and other
+        materials belong to Dorchain Studio or its licensors, unless agreed otherwise in
+        writing. After payment in full, the client receives a non-exclusive, transferable
+        right to use the delivered website. Source code, design files and access to
+        hosting, the domain and the CMS are handed over once the final invoice for the
+        assignment has been paid in full; until then, Dorchain Studio holds a right of
+        retention over these files and credentials. Unless agreed otherwise, Dorchain
+        Studio may show the delivered website to third parties as a reference/portfolio
+        piece.
+      </p>
+
+      <h2>Article 9 — Use of third parties</h2>
+      <p>
+        Dorchain Studio may use third parties to carry out the work, such as hosting
+        providers, domain registrars, plugin suppliers or form services (such as
+        Formspree). Dorchain Studio is not liable for failures, downtime or data breaches
+        at these third parties, unless they result from intent or wilful recklessness in
+        selecting that party.
+      </p>
+
+      <h2>Article 10 — Processing of personal data</h2>
+      <p>
+        Where Dorchain Studio, in carrying out maintenance services, has access to personal
+        data processed by the client (for example via a contact form or CMS operated by the
+        client), Dorchain Studio acts as a processor within the meaning of the General Data
+        Protection Regulation (GDPR). At the client's request, the parties will enter into
+        a separate data processing agreement for this purpose.
+      </p>
+
+      <h2>Article 11 — Warranty and correction of defects</h2>
+      <p>
+        If the delivered website fails to meet the arrangements set out in writing within
+        14 days of delivery, Dorchain Studio will correct this free of charge within a
+        reasonable period. This warranty does not cover defects caused by changes made
+        after delivery by the client or a third party, by use that deviates from the
+        agreed purpose, or by updates at third parties (hosting, browsers, plugins) beyond
+        Dorchain Studio's control. Results such as a higher Google ranking, more visitors
+        or a particular Lighthouse score are a best-effort commitment, not a guaranteed
+        outcome.
+      </p>
+
+      <h2>Article 12 — Liability</h2>
+      <p>
+        Dorchain Studio is only liable for direct damage that is the direct result of an
+        attributable failure to perform. Total liability per event (a series of related
+        events counts as one event) is limited to the amount the client paid for the
+        assignment in the 6 months preceding the event that caused the damage, with a
+        maximum of €2,500. Dorchain Studio is never liable for indirect damage, including
+        consequential damage, loss of profit, missed savings, reputational damage and
+        damage due to business interruption. These limitations do not apply in case of
+        intent or wilful recklessness on the part of Dorchain Studio. Any claim for damages
+        lapses if it is not submitted in writing within 12 months of the client becoming
+        aware of the damage.
+      </p>
+
+      <h2>Article 13 — Force majeure</h2>
+      <p>
+        Dorchain Studio is not required to fulfil an obligation if prevented from doing so
+        by force majeure, including illness, outages at hosting providers or other third
+        parties, internet outages and government measures. If the force majeure situation
+        lasts longer than 30 days, either party may dissolve the agreement in writing, in
+        whole or in part, without any obligation to pay damages.
+      </p>
+
+      <h2>Article 14 — Confidentiality</h2>
+      <p>
+        Both parties will keep confidential all information they receive from each other
+        in connection with the agreement, unless there is a legal obligation to disclose
+        it.
+      </p>
+
+      <h2>Article 15 — Ongoing services, cancellation and termination</h2>
+      <p>
+        Agreements for ongoing services (such as maintenance) are entered into for the
+        term stated in the quote and, unless agreed otherwise, are automatically renewed
+        thereafter for the same period. Either party may terminate such an agreement in
+        writing with one month's notice, effective at the end of the then-current period.
+        One-off assignments end by operation of law upon delivery and payment in full,
+        unless an ongoing service has been agreed to follow on from it. If the client
+        cancels a one-off assignment before completion, the client owes payment for the
+        work already carried out, calculated pro rata to the agreed price, without
+        prejudice to Dorchain Studio's right to reimbursement of costs already incurred.
+      </p>
+
+      <h2>Article 16 — Complaints</h2>
+      <p>
+        Complaints about the performance of the work should be reported as soon as
+        possible, and no later than 14 days after the complaint arose, in writing and with
+        reasons, via <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+
+      <h2>Article 17 — Governing law and disputes</h2>
+      <p>
+        Dutch law applies to all agreements between Dorchain Studio and the client.
+        Disputes will preferably be resolved through mutual consultation. If the parties
+        cannot reach agreement, the dispute will be submitted to the competent court in
+        the district where Dorchain Studio is based, unless mandatory law provides
+        otherwise.
+      </p>
+
+      <p class="legal__note">Last updated: July 2026.</p>
+      <p><a class="btn btn--ghost" href="/en/">&larr; Back to the site</a></p>
+    </div>
+  </main>
+  <Footer t={en.footer} nav={en.nav} />
+</Base>
+
+<style>
+  .legal { padding-block: clamp(3rem, 2rem + 4vw, 5rem) var(--space-section); }
+  .legal h1 { font-size: var(--text-h2); margin: 1rem 0; }
+  .legal__lead { font-size: var(--text-lead); color: var(--ink-soft); max-width: 64ch; margin-bottom: 2.5rem; }
+  .legal h2 { font-size: var(--text-h3); margin: 2rem 0 0.6rem; }
+  .legal p { max-width: 68ch; color: var(--ink-soft); margin-bottom: 0.6rem; }
+  .legal a { color: var(--accent-deep); }
+  .legal__note { font-size: 0.88rem; color: var(--muted); margin: 2.5rem 0; }
+  .legal .btn { color: var(--ink); }
+</style>

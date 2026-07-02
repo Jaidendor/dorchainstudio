@@ -46,6 +46,9 @@ const mailto = `mailto:${site.email}?subject=${encodeURIComponent(t.subject)}`;
       <p class="contact__privacy">
         {t.privacyText} <a href={t.privacyHref}>{t.privacyLink}</a>.
       </p>
+      <p class="contact__privacy">
+        {t.termsIntro} <a href={t.termsHref}>{t.termsLink}</a> {t.termsOutro}
+      </p>
     </form>
   </div>
 </section>
