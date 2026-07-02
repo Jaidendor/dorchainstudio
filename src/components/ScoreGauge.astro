@@ -66,10 +66,13 @@ const CIRC = 2 * Math.PI * R;
 <script>
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const gauges = document.querySelectorAll<HTMLElement>('.gauge');
+  const frameInterval = 1000 / 24; // 24fps is plenty smooth for a counting number, far cheaper than 60fps
 
   function activate(el: HTMLElement) {
     const score = Number(el.dataset.score ?? 0);
-    const circ = Number(getComputedStyle(el).getPropertyValue('--circ')) || 326.7;
+    // Read the inline custom property directly instead of getComputedStyle,
+    // which forces a synchronous style/layout recalculation.
+    const circ = Number(el.style.getPropertyValue('--circ')) || 326.7;
     el.style.setProperty('--offset', String(circ * (1 - score / 100)));
     el.classList.add('is-on');
     const num = el.querySelector<HTMLElement>('.gauge__num');
@@ -77,21 +80,33 @@ const CIRC = 2 * Math.PI * R;
     if (reduced) { num.textContent = String(score); return; }
     const start = performance.now();
     const dur = 1300;
+    let last = 0;
     const step = (t: number) => {
-      const p = Math.min(1, (t - start) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      num.textContent = String(Math.round(eased * score));
-      if (p < 1) requestAnimationFrame(step);
+      if (t - last >= frameInterval) {
+        last = t;
+        const p = Math.min(1, (t - start) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        num.textContent = String(Math.round(eased * score));
+      }
+      if (t - start < dur) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
   }
 
+  // Defer the (JS-driven) count-up so it never competes with the critical
+  // rendering path right after load — the CSS ring fill still starts instantly.
+  const schedule = (fn: () => void) =>
+    'requestIdleCallback' in window ? requestIdleCallback(fn, { timeout: 500 }) : setTimeout(fn, 1);
+
   if (reduced || !('IntersectionObserver' in window)) {
-    gauges.forEach(activate);
+    gauges.forEach((g) => schedule(() => activate(g)));
   } else {
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) { activate(e.target as HTMLElement); io.unobserve(e.target); }
+        if (e.isIntersecting) {
+          io.unobserve(e.target);
+          schedule(() => activate(e.target as HTMLElement));
+        }
       });
     }, { threshold: 0.4 });
     gauges.forEach((g) => io.observe(g));
