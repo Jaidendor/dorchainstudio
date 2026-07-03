@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dorchainwebsolutions.nl/sitemap-index.xml
+Sitemap: https://dorchain.studio/sitemap-index.xml

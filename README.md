@@ -45,7 +45,7 @@ Alle teksten en gegevens staan op één plek: [`src/data/site.ts`](src/data/site
 | `kvk`, `btw` | Na inschrijving bij de KvK |
 | `url` | Zodra het domein bekend is (stuurt sitemap, canonical en Open Graph aan) |
 
-**Domein koppelen:** de `public/CNAME` staat op `dorchainwebsolutions.nl`. Zet bij je
+**Domein koppelen:** de `public/CNAME` staat op `dorchain.studio`. Zet bij je
 domeinregistrar A-records naar de GitHub Pages IP-adressen en schakel in de repo-instellingen
 "Enforce HTTPS" in.
 
