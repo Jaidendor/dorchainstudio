@@ -29,10 +29,10 @@ const { t } = Astro.props;
         <span class="card__tag">{t.cardTag}</span>
       </div>
       <div class="card__gauges">
-        <ScoreGauge label={t.gaugeSpeed} score={98} />
-        <ScoreGauge label="SEO" score={100} />
-        <ScoreGauge label={t.gaugeA11y} score={96} />
-        <ScoreGauge label={t.gaugeMobile} score={100} />
+        <ScoreGauge label={t.gaugeSpeed} score={98} outOf={t.gaugeOutOf} />
+        <ScoreGauge label="SEO" score={100} outOf={t.gaugeOutOf} />
+        <ScoreGauge label={t.gaugeA11y} score={96} outOf={t.gaugeOutOf} />
+        <ScoreGauge label={t.gaugeMobile} score={100} outOf={t.gaugeOutOf} />
       </div>
       <p class="card__foot">
         <span aria-hidden="true">↗</span> {t.cardFoot}

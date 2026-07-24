@@ -3,8 +3,9 @@ interface Props {
   label: string;
   score: number;
   sub?: string;
+  outOf?: string;
 }
-const { label, score, sub } = Astro.props;
+const { label, score, sub, outOf = 'van 100' } = Astro.props;
 const R = 52;
 const CIRC = 2 * Math.PI * R;
 ---
@@ -16,7 +17,7 @@ const CIRC = 2 * Math.PI * R;
   <span class="gauge__num" data-target={score}>0</span>
   <span class="gauge__label">{label}</span>
   {sub && <span class="gauge__sub">{sub}</span>}
-  <span class="sr-only">{label}: score {score} van 100</span>
+  <span class="sr-only">{label}: score {score} {outOf}</span>
 </div>
 
 <style>
