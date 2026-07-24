@@ -27,6 +27,7 @@ const { t } = Astro.props;
         <span class="dst__num">+</span>
         <h3>{t.bigTitle}</h3>
         <p>{t.bigBody}</p>
+        <p class="dst__price">{t.bigPrice}</p>
         <a class="dst__link" href="#contact">{t.bigLink} <span aria-hidden="true">&rarr;</span></a>
       </article>
     </div>
@@ -49,6 +50,8 @@ const { t } = Astro.props;
   .dst__card--big p { color: var(--on-dark-soft); }
   .dst__card--big .dst__num { color: var(--accent); border-color: var(--dark-line); background: var(--dark-2); }
   .dst__card--big:hover { border-color: var(--accent); }
+  .dst__price { margin-top: 1.1rem; padding-top: 1.1rem; border-top: 1px solid var(--dark-line); font-size: 0.92rem; }
+  .dst__card--big .dst__price { color: var(--on-dark); }
   .dst__link { display: inline-flex; gap: 0.5em; margin-top: 1.3rem; font-weight: 600; color: var(--accent); text-decoration: none; }
   .dst__link:hover { text-decoration: underline; }
   @media (max-width: 900px) { .dst__grid { grid-template-columns: repeat(2, 1fr); } }

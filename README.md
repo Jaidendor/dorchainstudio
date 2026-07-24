@@ -2,9 +2,9 @@
 
 Landingssite voor **Dorchain Web Solutions**, de eenmanszaak van Jaiden Dorchain.
 
-Ik help zzp'ers met een bestaande website die beter moet: styling, vindbaarheid in Google,
-snelheid, toegankelijkheid en mobielvriendelijkheid. Optioneel bouw ik de site ook helemaal
-opnieuw als dat nodig is.
+Ik bouw de website van zzp'ers opnieuw op: styling, vindbaarheid in Google, snelheid,
+toegankelijkheid en mobielvriendelijkheid. Ik werk niet in het bestaande systeem van de
+klant; de nieuwe site komt in een eigen GitHub-repo en wordt gehost via Cloudflare.
 
 De site is gebouwd met [Astro](https://astro.build) als statische one-pager en gehost via
 GitHub Pages.
@@ -42,7 +42,8 @@ Alle teksten en gegevens staan op één plek: [`src/data/site.ts`](src/data/site
 | Veld | Wanneer invullen |
 | ---- | ---------------- |
 | `email`, `phone` | Direct |
-| `kvk`, `btw` | Na inschrijving bij de KvK |
+| `kvk` | Ingevuld: 42120924 |
+| `btw` | Zodra het BTW-identificatienummer binnen is (staat nu op `volgt`) |
 | `url` | Zodra het domein bekend is (stuurt sitemap, canonical en Open Graph aan) |
 
 **Domein koppelen:** de `public/CNAME` staat op `dorchain.studio`. Zet bij je
