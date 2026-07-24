@@ -1,30 +1,22 @@
-// Centrale site-configuratie. Pas de placeholders hieronder aan zodra de
-// eenmanszaak is opgericht en je echte gegevens hebt.
+// Centrale site-configuratie.
 export const site = {
   brand: 'Dorchain Studio',
   person: 'Jaiden Dorchain',
-  tagline: 'Webverbetering voor zzp’ers',
+  tagline: 'Nieuwe websites voor zzp’ers',
   description:
-    'Ik help zzp’ers met een bestaande website die beter moet: ' +
-    'styling, vindbaarheid in Google, snelheid, toegankelijkheid en ' +
-    'mobiel gebruik. Vraag een gratis website-scan aan.',
+    'Ik bouw de website van zzp’ers opnieuw op: styling, vindbaarheid in ' +
+    'Google, snelheid, toegankelijkheid en mobiel gebruik. Hosting en ' +
+    'onderhoud regel ik. Vraag een gratis scan van je huidige site aan.',
   url: 'https://dorchain.studio',
 
   // Formspree endpoint voor het contactformulier (door jou aangeleverd).
   formspreeEndpoint: 'https://formspree.io/f/mkolwgbn',
 
-  // --- Placeholders: invullen zodra bekend ---
   email: 'jaiden@dorchain.studio',
-  phone: '',                 // bijv. '+31 6 12 34 56 78'
+  phone: '',                 // bijv. '+31 6 12 34 56 78' — nog invullen
   city: 'Nederland',
-  kvk: 'volgt',              // KvK-nummer na inschrijving
-  btw: 'volgt',              // BTW-id na inschrijving
-
-  nav: [
-    { label: 'Herkenbaar?', href: '#herkenning' },
-    { label: 'Diensten', href: '#diensten' },
-    { label: 'Aanpak', href: '#aanpak' },
-    { label: 'Over', href: '#over' },
-    { label: 'Contact', href: '#contact' },
-  ],
+  kvk: '42120924',           // KvK-nummer
+  btw: 'volgt',              // BTW-identificatienummer — nog invullen
 } as const;
+
+// De navigatie-items staan per taal in src/i18n/translations.ts (nl.nav / en.nav).

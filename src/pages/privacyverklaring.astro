@@ -23,8 +23,8 @@ import { site } from '../data/site';
 
       <h2>Wie verwerkt je gegevens?</h2>
       <p>
-        {site.person}, handelend onder {site.brand} (eenmanszaak in oprichting). Je
-        bereikt mij via <a href={`mailto:${site.email}`}>{site.email}</a>.
+        {site.person}, handelend onder {site.brand} (eenmanszaak, KvK-nummer {site.kvk}).
+        Je bereikt mij via <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 
       <h2>Welke gegevens en waarom</h2>
@@ -49,7 +49,7 @@ import { site } from '../data/site';
         terecht bij de Autoriteit Persoonsgegevens.
       </p>
 
-      <p class="legal__note">Laatst bijgewerkt: juni 2026.</p>
+      <p class="legal__note">Laatst bijgewerkt: juli 2026.</p>
       <p><a class="btn btn--ghost" href="/">&larr; Terug naar de site</a></p>
     </div>
   </main>
