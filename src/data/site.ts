@@ -14,7 +14,7 @@ export const site = {
 
   email: 'jaiden@dorchain.studio',
   phone: '',                 // bijv. '+31 6 12 34 56 78' — nog invullen
-  city: 'Nederland',
+  city: 'Rotterdam',
   kvk: '42120924',           // KvK-nummer
   btw: 'volgt',              // BTW-identificatienummer — nog invullen
 } as const;

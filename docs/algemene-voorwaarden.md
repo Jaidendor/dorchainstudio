@@ -41,9 +41,9 @@ ongeluk mee te sturen met een offerte.
 
 - [x] KvK-nummer invullen — 42120924, staat in `src/data/site.ts`.
 - [ ] BTW-identificatienummer invullen zodra bekend (staat nu op `volgt`).
-- [ ] Vestigingsplaats invullen (`site.city` staat nu op "Nederland"); die
-      wordt gebruikt in artikel 1 en bepaalt in artikel 18 welke rechter
-      bevoegd is.
+- [x] Vestigingsplaats invullen — Rotterdam. Die wordt gebruikt in artikel 1
+      en bepaalt in artikel 18 welke rechter bevoegd is: het arrondissement
+      Rotterdam.
 - [ ] Vastleggen wat er per abonnement is inbegrepen en tegen welk tarief.
       Artikel 6 verwijst daarvoor naar de offerte. Op de site staat nu:
       eerste jaar inbegrepen bij de bouw, daarna € 149 per jaar excl. btw,
