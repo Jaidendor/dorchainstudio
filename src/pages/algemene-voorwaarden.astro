@@ -7,7 +7,7 @@ import { site } from '../data/site';
 ---
 <Base
   title={`Algemene voorwaarden — ${site.brand}`}
-  description="De algemene voorwaarden van Dorchain Studio voor webverbetering en websiteonderhoud."
+  description="De algemene voorwaarden van Dorchain Studio voor het bouwen, hosten en onderhouden van websites."
   path="/algemene-voorwaarden"
   lang="nl"
 >
@@ -18,206 +18,365 @@ import { site } from '../data/site';
       <h1>Algemene voorwaarden</h1>
       <p class="legal__lead">
         Deze voorwaarden gelden voor iedere overeenkomst tussen {site.person}, handelend
-        onder {site.brand} (eenmanszaak in oprichting), en een opdrachtgever. Ze zijn
-        geschreven voor zzp'ers en ondernemers die mij inschakelen voor het verbeteren,
-        bouwen of onderhouden van een website.
+        onder {site.brand} (eenmanszaak), en een opdrachtgever. Ze zijn geschreven voor
+        zzp'ers en ondernemers die mij inschakelen voor het bouwen, hosten of onderhouden
+        van een website.
       </p>
 
       <h2>Artikel 1 — Definities</h2>
-      <p>
-        <strong>Dorchain Studio / opdrachtnemer:</strong> de eenmanszaak van {site.person},
-        gevestigd in {site.city}, KvK-nummer {site.kvk}, BTW-identificatienummer {site.btw},
-        bereikbaar via <a href={`mailto:${site.email}`}>{site.email}</a>.
-      </p>
-      <p>
-        <strong>Opdrachtgever:</strong> de natuurlijke persoon of rechtspersoon die handelt
-        in de uitoefening van een beroep of bedrijf (waaronder zzp'ers) en met Dorchain
-        Studio een overeenkomst aangaat of wil aangaan.
-      </p>
-      <p>
-        <strong>Diensten:</strong> alle werkzaamheden die Dorchain Studio voor de
-        opdrachtgever verricht, waaronder het ontwerpen, verbeteren, bouwen, optimaliseren
-        en onderhouden van websites op het gebied van vormgeving, snelheid, vindbaarheid
-        (SEO), toegankelijkheid en responsiviteit.
-      </p>
-      <p>
-        <strong>Overeenkomst:</strong> iedere afspraak tussen Dorchain Studio en de
-        opdrachtgever tot het verrichten van diensten, inclusief de bijbehorende offerte.
-      </p>
-      <p>
-        <strong>Website-scan:</strong> de kosteloze eerste beoordeling van de bestaande
-        website van de opdrachtgever. Deze geldt als vrijblijvend advies, niet als aanbod.
-      </p>
+      <ol class="leden">
+        <li>
+          <strong>Dorchain Studio / opdrachtnemer:</strong> de eenmanszaak van {site.person},
+          gevestigd in {site.city}, KvK-nummer {site.kvk}, BTW-identificatienummer {site.btw},
+          bereikbaar via <a href={`mailto:${site.email}`}>{site.email}</a>.
+        </li>
+        <li>
+          <strong>Opdrachtgever:</strong> de natuurlijke persoon of rechtspersoon die handelt
+          in de uitoefening van een beroep of bedrijf (waaronder zzp'ers) en met Dorchain
+          Studio een overeenkomst aangaat of wil aangaan.
+        </li>
+        <li>
+          <strong>Diensten:</strong> alle werkzaamheden die Dorchain Studio voor de
+          opdrachtgever verricht, waaronder het ontwerpen, bouwen, optimaliseren, hosten
+          en onderhouden van websites op het gebied van vormgeving, snelheid, vindbaarheid
+          (SEO), toegankelijkheid en responsiviteit. Dorchain Studio bouwt websites in
+          beginsel opnieuw op in de eigen werkwijze en werkt niet in bestaande website- of
+          CMS-omgevingen van de opdrachtgever, tenzij schriftelijk anders is overeengekomen.
+        </li>
+        <li>
+          <strong>Overeenkomst:</strong> iedere afspraak tussen Dorchain Studio en de
+          opdrachtgever tot het verrichten van diensten, inclusief de bijbehorende offerte.
+        </li>
+        <li>
+          <strong>Website-scan:</strong> de kosteloze eerste beoordeling van de bestaande
+          website van de opdrachtgever. Deze geldt als vrijblijvend advies, niet als aanbod.
+        </li>
+      </ol>
 
       <h2>Artikel 2 — Toepasselijkheid</h2>
-      <p>
-        Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen,
-        werkzaamheden, overeenkomsten en leveringen van diensten door Dorchain Studio,
-        tenzij voorafgaand aan de overeenkomst schriftelijk anders is overeengekomen. Ze
-        gelden ook wanneer Dorchain Studio voor de uitvoering derden inschakelt.
-        Toepasselijkheid van inkoop- of andere voorwaarden van de opdrachtgever wordt
-        uitdrukkelijk van de hand gewezen. Blijkt een bepaling nietig of vernietigbaar,
-        dan blijven de overige bepalingen gewoon gelden; partijen vervangen de nietige
-        bepaling dan door een bepaling die zoveel mogelijk hetzelfde doel dient. Deze
-        voorwaarden zijn geschreven voor overeenkomsten met ondernemers. Wordt toch een
-        overeenkomst met een consument gesloten, dan gelden aanvullend de
-        dwingendrechtelijke bepalingen van het consumentenrecht.
-      </p>
+      <ol class="leden">
+        <li>
+          Deze voorwaarden zijn van toepassing op alle offertes, aanbiedingen,
+          werkzaamheden, overeenkomsten en leveringen van diensten door Dorchain Studio,
+          tenzij voorafgaand aan de overeenkomst schriftelijk anders is overeengekomen.
+        </li>
+        <li>
+          Ze gelden ook wanneer Dorchain Studio voor de uitvoering derden inschakelt.
+        </li>
+        <li>
+          Toepasselijkheid van inkoop- of andere voorwaarden van de opdrachtgever wordt
+          uitdrukkelijk van de hand gewezen.
+        </li>
+        <li>
+          Blijkt een bepaling nietig of vernietigbaar, dan blijven de overige bepalingen
+          gewoon gelden; partijen vervangen de nietige bepaling dan door een bepaling die
+          zoveel mogelijk hetzelfde doel dient.
+        </li>
+        <li>
+          Deze voorwaarden zijn geschreven voor overeenkomsten met ondernemers. Wordt toch
+          een overeenkomst met een consument gesloten, dan gelden aanvullend de
+          dwingendrechtelijke bepalingen van het consumentenrecht.
+        </li>
+      </ol>
 
       <h2>Artikel 3 — Aanbod en totstandkoming van de overeenkomst</h2>
-      <p>
-        De gratis website-scan is vrijblijvend en geldt niet als offerte. Elke offerte van
-        Dorchain Studio is vrijblijvend en 30 dagen geldig na dagtekening, tenzij anders
-        vermeld. Een overeenkomst komt tot stand zodra de opdrachtgever de offerte
-        schriftelijk (waaronder per e-mail) heeft geaccepteerd, of zodra Dorchain Studio op
-        verzoek van de opdrachtgever met de werkzaamheden is begonnen. Kennelijke fouten of
-        vergissingen in offertes of op de website binden Dorchain Studio niet.
-      </p>
+      <ol class="leden">
+        <li>De gratis website-scan is vrijblijvend en geldt niet als offerte.</li>
+        <li>
+          Elke offerte van Dorchain Studio is vrijblijvend en 30 dagen geldig na
+          dagtekening, tenzij anders vermeld.
+        </li>
+        <li>
+          Een overeenkomst komt tot stand zodra de opdrachtgever de offerte schriftelijk
+          (waaronder per e-mail) heeft geaccepteerd, of zodra Dorchain Studio op verzoek van
+          de opdrachtgever met de werkzaamheden is begonnen.
+        </li>
+        <li>
+          Kennelijke fouten of vergissingen in offertes of op de website binden Dorchain
+          Studio niet.
+        </li>
+      </ol>
 
       <h2>Artikel 4 — Uitvoering van de opdracht</h2>
-      <p>
-        Dorchain Studio voert de opdracht naar beste inzicht en vermogen uit, in beginsel
-        volgens de vier stappen op deze site: gratis scan, plan &amp; prijs, uitvoering en
-        livegang met toelichting. De opdrachtgever zorgt dat alle benodigde gegevens,
-        teksten, beeldmateriaal en logins tijdig worden aangeleverd; vertraging hierdoor
-        komt voor rekening van de opdrachtgever. Een genoemde opleveringstermijn is een
-        inschatting, geen fatale termijn, tenzij schriftelijk anders is afgesproken.
-      </p>
+      <ol class="leden">
+        <li>
+          Dorchain Studio voert de opdracht naar beste inzicht en vermogen uit, in beginsel
+          volgens de vier stappen op deze site: gratis scan, plan &amp; prijs, bouw en
+          livegang met toelichting.
+        </li>
+        <li>
+          Dorchain Studio bepaalt de wijze waarop de overeenkomst wordt uitgevoerd, met
+          inachtneming van de afspraken die met de opdrachtgever over het op te leveren
+          resultaat zijn gemaakt.
+        </li>
+        <li>
+          De opdrachtgever zorgt dat alle benodigde gegevens, teksten, beeldmateriaal en
+          toegang tot de domeinnaam tijdig worden aangeleverd; vertraging hierdoor komt voor
+          rekening van de opdrachtgever.
+        </li>
+        <li>
+          Een genoemde opleveringstermijn is een inschatting, geen fatale termijn, tenzij
+          schriftelijk anders is afgesproken.
+        </li>
+      </ol>
 
       <h2>Artikel 5 — Wijzigingen en meerwerk</h2>
+      <ol class="leden">
+        <li>
+          Wijzigingen op verzoek van de opdrachtgever die extra tijd of kosten met zich
+          meebrengen ten opzichte van de offerte, gelden als meerwerk.
+        </li>
+        <li>
+          Dorchain Studio informeert de opdrachtgever vooraf over de financiële gevolgen en
+          voert meerwerk pas uit na goedkeuring, tenzij directe uitvoering redelijkerwijs
+          niet kan wachten.
+        </li>
+        <li>
+          Het ontbreken van een schriftelijke opdracht voor meerwerk laat de aanspraak van
+          Dorchain Studio op betaling daarvan onverlet, mits uit de gedragingen van partijen
+          kan worden afgeleid dat het meerwerk in opdracht is verricht.
+        </li>
+      </ol>
+
+      <h2>Artikel 6 — Onderhoudsabonnement en kleine wijzigingen</h2>
+      <ol class="leden">
+        <li>
+          Voor websites die Dorchain Studio host en onderhoudt geldt een jaarlijks
+          abonnement. Wat daarin is inbegrepen en tegen welk tarief, staat in de offerte.
+        </li>
+        <li>
+          Onder een kleine wijziging wordt verstaan: het vervangen of bijwerken van bestaande
+          teksten, afbeeldingen, prijzen, openingstijden of contactgegevens op een bestaande
+          pagina, waarvoor maximaal 30 minuten werk nodig is en waarbij de opdrachtgever het
+          nieuwe materiaal in bewerkbare vorm aanlevert.
+        </li>
+        <li>
+          Niet als kleine wijziging gelden onder meer: nieuwe pagina's, nieuwe
+          functionaliteit, wijzigingen in het ontwerp of de structuur van de website, het
+          schrijven of herschrijven van teksten, en koppelingen met systemen van derden. Deze
+          werkzaamheden gelden als meerwerk in de zin van artikel 5.
+        </li>
+        <li>
+          Wijzigingen die in een abonnementsjaar niet zijn gebruikt, vervallen aan het einde
+          van dat jaar en worden niet meegenomen naar een volgend jaar.
+        </li>
+        <li>
+          Op de looptijd, verlenging en opzegging van het abonnement is artikel 16 van
+          toepassing.
+        </li>
+      </ol>
+
+      <h2>Artikel 7 — Prijzen</h2>
+      <ol class="leden">
+        <li>Genoemde prijzen zijn in euro's en exclusief BTW, tenzij anders vermeld.</li>
+        <li>
+          Kosten van derden (hosting, domeinregistratie, plugins, licenties, stockfoto's)
+          zijn niet inbegrepen, tenzij dit uitdrukkelijk in de offerte staat.
+        </li>
+        <li>
+          Voor doorlopende diensten zoals hosting en onderhoud kan de prijs jaarlijks worden
+          aangepast; een verhoging wordt minimaal 30 dagen van tevoren aangekondigd. Bij een
+          verhoging van meer dan 10% mag de opdrachtgever de doorlopende dienst binnen 14
+          dagen na aankondiging opzeggen tegen de datum waarop de verhoging in zou gaan.
+        </li>
+      </ol>
+
+      <h2>Artikel 8 — Betaling</h2>
+      <ol class="leden">
+        <li>
+          Tenzij anders overeengekomen factureert Dorchain Studio 50% van het offertebedrag
+          bij aanvang en het restant bij oplevering. Doorlopende diensten worden periodiek
+          vooraf gefactureerd.
+        </li>
+        <li>
+          Betaling gebeurt binnen 14 dagen na factuurdatum, zonder verrekening of
+          opschorting.
+        </li>
+        <li>
+          Bij niet-tijdige betaling is de opdrachtgever van rechtswege in verzuim en is de
+          wettelijke handelsrente verschuldigd, zonder dat een ingebrekestelling nodig is.
+        </li>
+        <li>
+          Redelijke incassokosten komen voor rekening van de opdrachtgever, met een minimum
+          conform de Wet Incassokosten.
+        </li>
+        <li>
+          Dorchain Studio mag werkzaamheden opschorten zolang niet aan de
+          betalingsverplichting is voldaan.
+        </li>
+      </ol>
+
+      <h2>Artikel 9 — Eigendom, licenties en intellectueel eigendom</h2>
+      <ol class="leden">
+        <li>
+          Alle rechten van intellectuele eigendom op ontwerpen, teksten, code, documentatie
+          en overige materialen berusten bij Dorchain Studio of haar licentiegevers, tenzij
+          schriftelijk anders overeengekomen.
+        </li>
+        <li>
+          Na volledige betaling krijgt de opdrachtgever een niet-exclusief, overdraagbaar
+          gebruiksrecht op de opgeleverde website.
+        </li>
+        <li>
+          De broncode van de website beheert Dorchain Studio in een eigen
+          versiebeheer-omgeving (GitHub).
+        </li>
+        <li>
+          Broncode, ontwerpbestanden en de toegang die nodig is om de website elders onder te
+          brengen worden op verzoek van de opdrachtgever overgedragen nadat de laatste
+          factuur voor de opdracht volledig is voldaan; tot dat moment komt Dorchain Studio
+          een retentierecht toe.
+        </li>
+        <li>De domeinnaam blijft eigendom van de opdrachtgever.</li>
+        <li>
+          Het is de opdrachtgever niet toegestaan aanduidingen omtrent auteursrechten,
+          merken of andere rechten van intellectuele eigendom uit de materialen te
+          verwijderen, tenzij anders overeengekomen.
+        </li>
+        <li>
+          Tenzij anders overeengekomen mag Dorchain Studio de opgeleverde website als
+          referentie/portfolio tonen aan derden.
+        </li>
+      </ol>
+
+      <h2>Artikel 10 — Gebruik van derde partijen</h2>
+      <ol class="leden">
+        <li>
+          Voor de uitvoering maakt Dorchain Studio gebruik van derden, waaronder Cloudflare
+          (hosting en levering van de website), GitHub (opslag en versiebeheer van de
+          broncode), domeinregistrars en formulierdiensten zoals Formspree.
+        </li>
+        <li>
+          Dorchain Studio mag een van deze partijen vervangen door een gelijkwaardige partij.
+        </li>
+        <li>
+          Dorchain Studio is niet aansprakelijk voor tekortkomingen, uitval of datalekken bij
+          deze derde partijen, tenzij deze het gevolg zijn van opzet of bewuste roekeloosheid
+          bij de keuze van die partij.
+        </li>
+        <li>
+          Wordt de overeenkomst voor hosting beëindigd, dan krijgt de opdrachtgever een
+          redelijke termijn van ten minste 30 dagen om de website elders onder te brengen.
+        </li>
+      </ol>
+
+      <h2>Artikel 11 — Verwerking van persoonsgegevens</h2>
       <p>
-        Wijzigingen op verzoek van de opdrachtgever die extra tijd of kosten met zich
-        meebrengen ten opzichte van de offerte, gelden als meerwerk. Dorchain Studio
-        informeert de opdrachtgever vooraf over de financiële gevolgen en voert meerwerk
-        pas uit na goedkeuring, tenzij directe uitvoering redelijkerwijs niet kan wachten.
+        Voor zover Dorchain Studio bij de uitvoering van hosting- en onderhoudsdiensten
+        toegang heeft tot persoonsgegevens die de opdrachtgever verwerkt (bijvoorbeeld via
+        een contactformulier op de website), treedt Dorchain Studio op als verwerker in de
+        zin van de Algemene Verordening Gegevensbescherming (AVG). Partijen sluiten
+        hiervoor, op verzoek van de opdrachtgever, een separate verwerkersovereenkomst.
       </p>
 
-      <h2>Artikel 6 — Prijzen</h2>
-      <p>
-        Genoemde prijzen zijn in euro's en exclusief BTW, tenzij anders vermeld. Kosten van
-        derden (hosting, domeinregistratie, plugins, licenties, stockfoto's) zijn niet
-        inbegrepen, tenzij dit uitdrukkelijk in de offerte staat. Voor doorlopende diensten
-        zoals onderhoud kan de prijs jaarlijks worden aangepast; een verhoging wordt
-        minimaal 30 dagen van tevoren aangekondigd. Bij een verhoging van meer dan 10% mag
-        de opdrachtgever de doorlopende dienst binnen 14 dagen na aankondiging opzeggen
-        tegen de datum waarop de verhoging in zou gaan.
-      </p>
+      <h2>Artikel 12 — Garantie en herstel van gebreken</h2>
+      <ol class="leden">
+        <li>
+          Voldoet de opgeleverde website binnen 14 dagen na oplevering niet aan de
+          schriftelijk vastgelegde afspraken, dan herstelt Dorchain Studio dit kosteloos
+          binnen een redelijke termijn.
+        </li>
+        <li>
+          Deze garantie geldt niet voor gebreken door wijzigingen die na oplevering door de
+          opdrachtgever of derden zijn aangebracht, door afwijkend gebruik, of door updates
+          bij derde partijen (hosting, browsers, plugins) waarop Dorchain Studio geen invloed
+          heeft.
+        </li>
+        <li>
+          Resultaten zoals een hogere Google-ranking, meer bezoekers of een bepaalde
+          Lighthouse-score zijn een inspanning, geen gegarandeerd resultaat.
+        </li>
+      </ol>
 
-      <h2>Artikel 7 — Betaling</h2>
-      <p>
-        Tenzij anders overeengekomen factureert Dorchain Studio 50% van het offertebedrag
-        bij aanvang en het restant bij oplevering. Doorlopende diensten worden periodiek
-        vooraf gefactureerd. Betaling gebeurt binnen 14 dagen na factuurdatum, zonder
-        verrekening of opschorting. Bij niet-tijdige betaling is de opdrachtgever van
-        rechtswege in verzuim en is de wettelijke handelsrente verschuldigd, zonder dat een
-        ingebrekestelling nodig is. Redelijke incassokosten komen voor rekening van de
-        opdrachtgever, met een minimum conform de Wet Incassokosten. Dorchain Studio mag
-        werkzaamheden opschorten zolang niet aan de betalingsverplichting is voldaan.
-      </p>
+      <h2>Artikel 13 — Aansprakelijkheid</h2>
+      <ol class="leden">
+        <li>
+          Dorchain Studio is uitsluitend aansprakelijk voor directe schade die het
+          rechtstreekse gevolg is van een toerekenbare tekortkoming.
+        </li>
+        <li>
+          De totale aansprakelijkheid per gebeurtenis (een reeks samenhangende gebeurtenissen
+          geldt als één gebeurtenis) is beperkt tot het bedrag dat de opdrachtgever in de 6
+          maanden voorafgaand aan de schadeveroorzakende gebeurtenis voor de opdracht heeft
+          betaald, met een maximum van 2.500 euro.
+        </li>
+        <li>
+          Dorchain Studio is nooit aansprakelijk voor indirecte schade, waaronder
+          gevolgschade, gederfde winst, gemiste besparingen, reputatieschade en schade door
+          bedrijfsstagnatie.
+        </li>
+        <li>
+          Deze beperkingen gelden niet bij opzet of bewuste roekeloosheid van Dorchain Studio.
+        </li>
+        <li>
+          Een vordering tot schadevergoeding vervalt als deze niet binnen 12 maanden nadat de
+          opdrachtgever bekend raakte met de schade, schriftelijk is ingediend.
+        </li>
+      </ol>
 
-      <h2>Artikel 8 — Eigendom, licenties en intellectueel eigendom</h2>
-      <p>
-        Alle rechten van intellectuele eigendom op ontwerpen, teksten, code, documentatie
-        en overige materialen berusten bij Dorchain Studio of haar licentiegevers, tenzij
-        schriftelijk anders overeengekomen. Na volledige betaling krijgt de opdrachtgever
-        een niet-exclusief, overdraagbaar gebruiksrecht op de opgeleverde website. Broncode,
-        ontwerpbestanden en toegang tot hosting, domein en CMS worden overgedragen nadat de
-        laatste factuur voor de opdracht volledig is voldaan; tot dat moment komt Dorchain
-        Studio een retentierecht toe. Tenzij anders overeengekomen mag Dorchain Studio de
-        opgeleverde website als referentie/portfolio tonen aan derden.
-      </p>
+      <h2>Artikel 14 — Overmacht</h2>
+      <ol class="leden">
+        <li>
+          Dorchain Studio hoeft een verplichting niet na te komen als zij daarin wordt
+          verhinderd door overmacht, waaronder ziekte, storingen bij hostingproviders of
+          andere derde partijen, internetstoringen en overheidsmaatregelen.
+        </li>
+        <li>
+          Duurt de overmacht langer dan 30 dagen, dan mag ieder van beide partijen de
+          overeenkomst schriftelijk geheel of gedeeltelijk ontbinden, zonder schadeplicht.
+        </li>
+      </ol>
 
-      <h2>Artikel 9 — Gebruik van derde partijen</h2>
-      <p>
-        Voor de uitvoering kan Dorchain Studio gebruikmaken van derden, zoals
-        hostingproviders, domeinregistrars, pluginleveranciers of formulierdiensten (zoals
-        Formspree). Dorchain Studio is niet aansprakelijk voor tekortkomingen, uitval of
-        datalekken bij deze derde partijen, tenzij deze het gevolg zijn van opzet of
-        bewuste roekeloosheid bij de keuze van die partij.
-      </p>
-
-      <h2>Artikel 10 — Verwerking van persoonsgegevens</h2>
-      <p>
-        Voor zover Dorchain Studio bij de uitvoering van onderhoudsdiensten toegang heeft
-        tot persoonsgegevens die de opdrachtgever verwerkt (bijvoorbeeld via een
-        contactformulier of CMS van de opdrachtgever), treedt Dorchain Studio op als
-        verwerker in de zin van de Algemene Verordening Gegevensbescherming (AVG). Partijen
-        sluiten hiervoor, op verzoek van de opdrachtgever, een separate
-        verwerkersovereenkomst.
-      </p>
-
-      <h2>Artikel 11 — Garantie en herstel van gebreken</h2>
-      <p>
-        Voldoet de opgeleverde website binnen 14 dagen na oplevering niet aan de
-        schriftelijk vastgelegde afspraken, dan herstelt Dorchain Studio dit kosteloos
-        binnen een redelijke termijn. Deze garantie geldt niet voor gebreken door
-        wijzigingen die na oplevering door de opdrachtgever of derden zijn aangebracht, door
-        afwijkend gebruik, of door updates bij derde partijen (hosting, browsers, plugins)
-        waarop Dorchain Studio geen invloed heeft. Resultaten zoals een hogere
-        Google-ranking, meer bezoekers of een bepaalde Lighthouse-score zijn een
-        inspanning, geen gegarandeerd resultaat.
-      </p>
-
-      <h2>Artikel 12 — Aansprakelijkheid</h2>
-      <p>
-        Dorchain Studio is uitsluitend aansprakelijk voor directe schade die het
-        rechtstreekse gevolg is van een toerekenbare tekortkoming. De totale
-        aansprakelijkheid per gebeurtenis (een reeks samenhangende gebeurtenissen geldt als
-        één gebeurtenis) is beperkt tot het bedrag dat de opdrachtgever in de 6 maanden
-        voorafgaand aan de schadeveroorzakende gebeurtenis voor de opdracht heeft betaald,
-        met een maximum van 2.500 euro. Dorchain Studio is nooit aansprakelijk voor
-        indirecte schade, waaronder gevolgschade, gederfde winst, gemiste besparingen,
-        reputatieschade en schade door bedrijfsstagnatie. Deze beperkingen gelden niet bij
-        opzet of bewuste roekeloosheid van Dorchain Studio. Een vordering tot
-        schadevergoeding vervalt als deze niet binnen 12 maanden nadat de opdrachtgever
-        bekend raakte met de schade, schriftelijk is ingediend.
-      </p>
-
-      <h2>Artikel 13 — Overmacht</h2>
-      <p>
-        Dorchain Studio hoeft een verplichting niet na te komen als zij daarin wordt
-        verhinderd door overmacht, waaronder ziekte, storingen bij hostingproviders of
-        andere derde partijen, internetstoringen en overheidsmaatregelen. Duurt de overmacht
-        langer dan 30 dagen, dan mag ieder van beide partijen de overeenkomst schriftelijk
-        geheel of gedeeltelijk ontbinden, zonder schadeplicht.
-      </p>
-
-      <h2>Artikel 14 — Geheimhouding</h2>
+      <h2>Artikel 15 — Geheimhouding</h2>
       <p>
         Beide partijen houden alle vertrouwelijke informatie geheim die zij in het kader van
         de overeenkomst van elkaar hebben ontvangen, tenzij een wettelijke plicht tot
         bekendmaking geldt.
       </p>
 
-      <h2>Artikel 15 — Doorlopende diensten, annulering en opzegging</h2>
-      <p>
-        Overeenkomsten voor doorlopende diensten (bijvoorbeeld onderhoud) worden aangegaan
-        voor de in de offerte genoemde duur en worden daarna, tenzij anders overeengekomen,
-        stilzwijgend verlengd voor eenzelfde periode. Beide partijen kunnen zo'n
-        overeenkomst schriftelijk opzeggen met een opzegtermijn van 1 maand tegen het einde
-        van de lopende periode. Eenmalige opdrachten eindigen van rechtswege door oplevering
-        en volledige betaling, tenzij aansluitend een doorlopende dienst is afgesproken.
-        Annuleert de opdrachtgever een eenmalige opdracht tussentijds, dan is de
-        opdrachtgever het reeds verrichte werk verschuldigd, berekend naar rato van de
-        overeengekomen prijs, onverminderd het recht van Dorchain Studio op vergoeding van
-        reeds gemaakte kosten.
-      </p>
+      <h2>Artikel 16 — Doorlopende diensten, annulering en opzegging</h2>
+      <ol class="leden">
+        <li>
+          Overeenkomsten voor doorlopende diensten (bijvoorbeeld hosting en onderhoud) worden
+          aangegaan voor de in de offerte genoemde duur en worden daarna, tenzij anders
+          overeengekomen, stilzwijgend verlengd voor eenzelfde periode.
+        </li>
+        <li>
+          Beide partijen kunnen zo'n overeenkomst schriftelijk opzeggen met een opzegtermijn
+          van 1 maand tegen het einde van de lopende periode.
+        </li>
+        <li>
+          Eenmalige opdrachten eindigen van rechtswege door oplevering en volledige betaling,
+          tenzij aansluitend een doorlopende dienst is afgesproken.
+        </li>
+        <li>
+          Annuleert de opdrachtgever een eenmalige opdracht tussentijds, dan is de
+          opdrachtgever het reeds verrichte werk verschuldigd, berekend naar rato van de
+          overeengekomen prijs, onverminderd het recht van Dorchain Studio op vergoeding van
+          reeds gemaakte kosten.
+        </li>
+      </ol>
 
-      <h2>Artikel 16 — Klachten</h2>
+      <h2>Artikel 17 — Klachten</h2>
       <p>
         Klachten over de uitvoering meld je zo snel mogelijk, uiterlijk binnen 14 dagen
         nadat de klacht is ontstaan, schriftelijk en gemotiveerd via
         <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 
-      <h2>Artikel 17 — Toepasselijk recht en geschillen</h2>
-      <p>
-        Op alle overeenkomsten tussen Dorchain Studio en de opdrachtgever is Nederlands
-        recht van toepassing. Geschillen worden bij voorkeur in onderling overleg
-        opgelost. Komen partijen er niet uit, dan wordt het geschil voorgelegd aan de
-        bevoegde rechter in het arrondissement waarin Dorchain Studio is gevestigd, tenzij
-        dwingend recht anders voorschrijft.
-      </p>
+      <h2>Artikel 18 — Toepasselijk recht en geschillen</h2>
+      <ol class="leden">
+        <li>
+          Op alle overeenkomsten tussen Dorchain Studio en de opdrachtgever is Nederlands
+          recht van toepassing.
+        </li>
+        <li>
+          Geschillen worden bij voorkeur in onderling overleg opgelost. Komen partijen er
+          niet uit, dan wordt het geschil voorgelegd aan de bevoegde rechter in het
+          arrondissement waarin Dorchain Studio is gevestigd, tenzij dwingend recht anders
+          voorschrijft.
+        </li>
+      </ol>
 
       <p class="legal__note">Laatst bijgewerkt: juli 2026.</p>
       <p><a class="btn btn--ghost" href="/">&larr; Terug naar de site</a></p>
@@ -233,6 +392,9 @@ import { site } from '../data/site';
   .legal h2 { font-size: var(--text-h3); margin: 2rem 0 0.6rem; }
   .legal p { max-width: 68ch; color: var(--ink-soft); margin-bottom: 0.6rem; }
   .legal a { color: var(--accent-deep); }
+  .leden { max-width: 68ch; color: var(--ink-soft); margin: 0 0 0.6rem; padding-left: 1.6rem; }
+  .leden li { margin-bottom: 0.5rem; padding-left: 0.2rem; }
+  .leden li::marker { color: var(--muted); font-variant-numeric: tabular-nums; }
   .legal__note { font-size: 0.88rem; color: var(--muted); margin: 2.5rem 0; }
   .legal .btn { color: var(--ink); }
 </style>
